@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Pizzeria "Pod Koziołkami"</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/jquery.plugin.js"></script>
+  <script src="static/js/jquery.countdown.js"></script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+
+
+  <script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="models.js"></script>
+  <script src="views.js"></script>
+  <script src="controllers.js"></script>
+</head>
+
+<body ng-app="">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a id="menu-home" class="navbar-brand menu-item" onclick="homePage()">Pizzeria "Pod Koziołkami"</a> 
+    </div>
+    <ul id="page-menu" class="nav navbar-nav">
+      <li><a class="menu-item" onclick="showMenu()">Menu</a></li>
+      <li><a class="menu-item" onclick="basket_controller.loadView()">Koszyk</a></li>
+      <li><a class="menu-item" onclick="info_controller.loadView()">Kontakt</a></li>
+      <li><a id="total-price">Do zapłaty: <div id="price-navbar" >0</div> zł</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="home" class="container">
+  <h3>Pizzeria "Pod Koziołkami"</h3>
+  <p>Witamy na stronie naszej Pizzerii</p>
+</div>
+
+<div id="menu" class="container">
+  <h2>Menu</h2>
+  <p>Wybierz ulubioną pizzę.</p>
+  <div id="menu-list" class="panel-group">
+  </div>
+</div>
+
+<div id="basket" class="container">
+  <h2>Koszyk</h2>
+  <p>Lista rzeczy w twoim koszyku:</p>
+  <div id="basket-list" class="panel-group">
+  </div>
+</div>
+
+<div id="order" class="container">
+  <h2>Złóż zamówienie</h2>
+  <div id="resume"></div>
+  <form id="order-form" name="orderForm">
+    <div class="row">
+      <div class="col-sm-3">
+        <label>Numer telefonu:</label>
+      </div>
+      <div class="col-sm-9">
+        <input name="phone" type="number" ng-model="phone" required>
+        <span class="form-error" ng-show="orderForm.phone.$touched && orderForm.phone.$error.required">To pole jest wymagane.</span>
+        <span class="form-error" ng-show="orderForm.phone.$touched && orderForm.phone.$error.number">Niedozwolone znaki. Wprowadź numer.</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label>Adres:</label>
+      </div>
+      <div class="col-sm-9">
+        <input name="street" type="text" ng-model="street" required>
+        <span class="form-error" ng-show="orderForm.street.$touched && orderForm.street.$invalid">To pole jest wymagane.</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label>Uwagi:</label>
+      </div>
+      <div class="col-sm-9">
+        <textarea id="remarks" rows="5" cols="50" ng-model="remarks"></textarea>
+      </div>
+    </div>
+    <button onclick='basket_controller.loadView()' type='button' class='basket-button btn btn-defualt'>Powrót</button>
+    <button onclick='orderPreview()' ng-disabled="orderForm.$invalid" type='button' class='basket-button btn btn-success'>Dalej</button>
+  </form>
+</div>
+
+<div id="order-preview" class="container">
+  <div class="alert alert-danger order-failed">Niestety, wystąpił bład. Zamówienie nie może zostać zrealizowane.</div>
+
+  <h3>Twoje dane</h3>
+  <p>Numer telefonu: {{ phone }}</p>
+  <p>Adres: {{ street }}</p>
+  <p>Uwagi: {{ remarks }}</p>
+
+  <button onclick='orderPreview()' type='button' class='basket-button btn btn-defualt'>Powrót</button>
+  <button onclick='makeOrder()' type='button' class='basket-button btn btn-success'>Zatwierdź zamówienie</button>
+</div>
+
+<div id="order-status" class="container">
+  <div class="alert alert-success">Zamówienie zostało przyjęte do realizacji.</div>
+  <h1>Twoje zamówienie:</h1>
+  <div id="resume2"></div>
+  <h3>Czas oczekiwania to: </h3>
+  <h2 id="defaultCountdown"></h2>
+  <h2 id="timer-msg">Pizza została dostarczona. Smacznego!</h2>
+</div>
+
+<div id="contact" class="container">
+  <h2>Kontakt</h2>
+  <div id="info" class="panel-group">
+  </div>
+</div>
+
+</body>
+</html>

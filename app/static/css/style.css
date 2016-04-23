@@ -1,0 +1,45 @@
+body {
+	margin-top: 5em;
+}
+
+.container, .order-failed {
+    display: none;
+}
+
+#total-price {
+	color: red;
+}
+
+#price-navbar, #price-basket, .basket-button {
+	display: inline;
+}
+
+#order input {
+	width: 100%;
+}
+
+#order .row {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+#menu-home {
+	color: white;
+}
+
+.menu-item {
+	cursor: pointer;
+}
+
+.form-error {
+	color: red;
+}
+
+#defaultCountdown {
+	color: #ddbd0c;
+}
+
+#timer-msg {
+    display: none;
+    color: green;
+}

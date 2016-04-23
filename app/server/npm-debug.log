@@ -1,0 +1,177 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'lodash' ]
+2 info using npm@1.4.29
+3 info using node@v0.10.42
+4 verbose node symlink /usr/bin/node
+5 warn deprecated This version of npm lacks support for important features,
+6 warn deprecated such as scoped packages, offered by the primary npm
+7 warn deprecated registry. Consider upgrading to at least npm@2, if not the
+8 warn deprecated latest stable version. To upgrade to npm@2, run:
+9 warn deprecated npm -g install npm@latest-2
+10 warn deprecated To upgrade to the latest stable version, run:
+11 warn deprecated npm -g install npm@latest
+12 warn deprecated (Depending on how Node.js was installed on your system, you
+13 warn deprecated may need to prefix the preceding commands with `sudo`, or if
+14 warn deprecated on Windows, run them from an Administrator prompt.)
+15 warn deprecated If you're running the version of npm bundled with
+16 warn deprecated Node.js 0.10 LTS, be aware that the next version of 0.10 LTS
+17 warn deprecated will be bundled with a version of npm@2, which has some small
+18 warn deprecated backwards-incompatible changes made to `npm run-script` and
+19 warn deprecated semver behavior.
+20 warn package.json project.server@1.0.0 No repository field.
+21 warn package.json project.server@1.0.0 No README data
+22 verbose readDependencies using package.json deps
+23 verbose cache add [ 'lodash', null ]
+24 verbose cache add name=undefined spec="lodash" args=["lodash",null]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: 'lodash',
+25 verbose parsed url   path: 'lodash',
+25 verbose parsed url   href: 'lodash' }
+26 silly lockFile 901466a5-lodash lodash
+27 verbose lock lodash /home/kasia/.npm/901466a5-lodash.lock
+28 silly lockFile 901466a5-lodash lodash
+29 silly lockFile 901466a5-lodash lodash
+30 verbose addNamed [ 'lodash', '' ]
+31 verbose addNamed [ null, '*' ]
+32 silly lockFile f856e425-lodash lodash@
+33 verbose lock lodash@ /home/kasia/.npm/f856e425-lodash.lock
+34 silly addNameRange { name: 'lodash', range: '*', hasData: false }
+35 verbose request where is /lodash
+36 verbose request registry https://registry.npmjs.org/
+37 verbose request id d68ff8636d2e05e6
+38 verbose url raw /lodash
+39 verbose url resolving [ 'https://registry.npmjs.org/', './lodash' ]
+40 verbose url resolved https://registry.npmjs.org/lodash
+41 verbose request where is https://registry.npmjs.org/lodash
+42 info trying registry request attempt 1 at 00:40:01
+43 verbose etag "OFAWTRWT1JHXV0D7TEZFJ1DX"
+44 http GET https://registry.npmjs.org/lodash
+45 http 200 https://registry.npmjs.org/lodash
+46 silly registry.get cb [ 200,
+46 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+46 silly registry.get     etag: '"BTNVAD5Q330G11MLR88AX2CIH"',
+46 silly registry.get     'content-type': 'application/json',
+46 silly registry.get     'cache-control': 'max-age=300',
+46 silly registry.get     'content-length': '115595',
+46 silly registry.get     'accept-ranges': 'bytes',
+46 silly registry.get     date: 'Mon, 15 Feb 2016 23:40:01 GMT',
+46 silly registry.get     via: '1.1 varnish',
+46 silly registry.get     age: '284',
+46 silly registry.get     connection: 'keep-alive',
+46 silly registry.get     'x-served-by': 'cache-ams4145-AMS',
+46 silly registry.get     'x-cache': 'HIT',
+46 silly registry.get     'x-cache-hits': '5',
+46 silly registry.get     'x-timer': 'S1455579601.743547,VS0,VE0',
+46 silly registry.get     vary: 'Accept' } ]
+47 silly addNameRange number 2 { name: 'lodash', range: '*', hasData: true }
+48 silly addNameRange versions [ 'lodash',
+48 silly addNameRange   [ '0.1.0',
+48 silly addNameRange     '0.2.0',
+48 silly addNameRange     '0.2.1',
+48 silly addNameRange     '0.2.2',
+48 silly addNameRange     '0.3.0',
+48 silly addNameRange     '0.3.1',
+48 silly addNameRange     '0.3.2',
+48 silly addNameRange     '0.4.0',
+48 silly addNameRange     '0.4.1',
+48 silly addNameRange     '0.4.2',
+48 silly addNameRange     '0.5.0-rc.1',
+48 silly addNameRange     '0.5.0',
+48 silly addNameRange     '0.5.1',
+48 silly addNameRange     '0.5.2',
+48 silly addNameRange     '0.6.0',
+48 silly addNameRange     '0.6.1',
+48 silly addNameRange     '0.7.0',
+48 silly addNameRange     '0.8.0',
+48 silly addNameRange     '0.8.1',
+48 silly addNameRange     '0.8.2',
+48 silly addNameRange     '0.9.0',
+48 silly addNameRange     '0.9.1',
+48 silly addNameRange     '0.9.2',
+48 silly addNameRange     '0.10.0',
+48 silly addNameRange     '1.0.0-rc.1',
+48 silly addNameRange     '1.0.0-rc.2',
+48 silly addNameRange     '1.0.0-rc.3',
+48 silly addNameRange     '1.0.0',
+48 silly addNameRange     '1.0.1',
+48 silly addNameRange     '1.1.0',
+48 silly addNameRange     '1.1.1',
+48 silly addNameRange     '1.2.0',
+48 silly addNameRange     '1.2.1',
+48 silly addNameRange     '1.3.0',
+48 silly addNameRange     '1.3.1',
+48 silly addNameRange     '2.0.0',
+48 silly addNameRange     '2.1.0',
+48 silly addNameRange     '2.2.0',
+48 silly addNameRange     '2.2.1',
+48 silly addNameRange     '2.3.0',
+48 silly addNameRange     '2.4.0',
+48 silly addNameRange     '2.4.1',
+48 silly addNameRange     '3.0.0',
+48 silly addNameRange     '3.0.1',
+48 silly addNameRange     '3.1.0',
+48 silly addNameRange     '3.2.0',
+48 silly addNameRange     '3.3.0',
+48 silly addNameRange     '3.3.1',
+48 silly addNameRange     '3.4.0',
+48 silly addNameRange     '3.5.0',
+48 silly addNameRange     '3.6.0',
+48 silly addNameRange     '1.0.2',
+48 silly addNameRange     '3.7.0',
+48 silly addNameRange     '2.4.2',
+48 silly addNameRange     '3.8.0',
+48 silly addNameRange     '3.9.0',
+48 silly addNameRange     '3.9.1',
+48 silly addNameRange     '3.9.2',
+48 silly addNameRange     '3.9.3',
+48 silly addNameRange     '3.10.0',
+48 silly addNameRange     '3.10.1',
+48 silly addNameRange     '4.0.0',
+48 silly addNameRange     '4.0.1',
+48 silly addNameRange     '4.1.0',
+48 silly addNameRange     '4.2.0',
+48 silly addNameRange     '4.2.1',
+48 silly addNameRange     '4.3.0' ] ]
+49 verbose addNamed [ 'lodash', '4.3.0' ]
+50 verbose addNamed [ '4.3.0', '4.3.0' ]
+51 silly lockFile 8975270a-lodash-4-3-0 lodash@4.3.0
+52 verbose lock lodash@4.3.0 /home/kasia/.npm/8975270a-lodash-4-3-0.lock
+53 silly lockFile 2450a72f-pmjs-org-lodash-lodash-4-3-0-tgz https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+54 verbose lock https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz /home/kasia/.npm/2450a72f-pmjs-org-lodash-lodash-4-3-0-tgz.lock
+55 verbose addRemoteTarball [ 'https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz',
+55 verbose addRemoteTarball   'efd9c4a6ec53f3b05412429915c3e4824e4d25a4' ]
+56 info retry fetch attempt 1 at 00:40:02
+57 verbose fetch to= /tmp/npm-9028--_0vrKO+/registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+58 http GET https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+59 http 200 https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+60 silly lockFile 2450a72f-pmjs-org-lodash-lodash-4-3-0-tgz https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+61 silly lockFile 2450a72f-pmjs-org-lodash-lodash-4-3-0-tgz https://registry.npmjs.org/lodash/-/lodash-4.3.0.tgz
+62 silly lockFile 8975270a-lodash-4-3-0 lodash@4.3.0
+63 silly lockFile 8975270a-lodash-4-3-0 lodash@4.3.0
+64 silly lockFile f856e425-lodash lodash@
+65 silly lockFile f856e425-lodash lodash@
+66 error Error: EACCES, mkdir '/home/kasia/.npm/lodash/4.3.0'
+66 error  { [Error: EACCES, mkdir '/home/kasia/.npm/lodash/4.3.0']
+66 error   errno: 3,
+66 error   code: 'EACCES',
+66 error   path: '/home/kasia/.npm/lodash/4.3.0',
+66 error   parent: 'project.server' }
+67 error Please try running this command again as root/Administrator.
+68 error System Linux 3.2.0-92-generic-pae
+69 error command "/usr/bin/node" "/usr/bin/npm" "install" "lodash"
+70 error cwd /home/kasia/STUDIA/JS/Project/app/server
+71 error node -v v0.10.42
+72 error npm -v 1.4.29
+73 error path /home/kasia/.npm/lodash/4.3.0
+74 error code EACCES
+75 error errno 3
+76 error stack Error: EACCES, mkdir '/home/kasia/.npm/lodash/4.3.0'
+77 verbose exit [ 3, true ]
